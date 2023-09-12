@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Comments system</title>
+  <script src="./main.js"></script>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="chooseUsers">
+      <span style="font-family:Inter, sans-serif; font-size: 16px; align-self: center">Select
+        user:</span>
+    </div>
+    <hr>
+    <div class="filter-container">
+      <span class="comments-counter"><span class="comments-superscript">Комментарии</span>
+        (0)</span>
+      <div class="wrapper">
+        <div class="dropdown-container">
+          <div class="select-container">
+            <select class="dropbox">
+              <option value="date">По дате</option>
+              <option value="likes" selected>По количеству оценок</option>
+              <option value="none">По актуальности</option>
+              <option value="responses">По количеству ответов</option>
+            </select>
+            <div class="triangle"></div>
+          </div>
+        </div>
+        <span class="favorites-wrapper">
+          <span class="favorites">Избранное</span>
+          <img src="./images/heart.svg" alt="heart" class="heart-image">
+        </span>
+      </div>
+    </div>
+    <form class="input-container">
+      <img class="avatar" src="images/user_1.png" width="61" height="61" alt />
+      <div class="username-input-wrapper">
+        <div class="username-container">
+          <span class="user-name">Максим Авдеенко</span>
+          <span class="counter">Макс. 1000 символов</span>
+        </div>
+        <span class="error-message">Слишком длинное сообщение</span>
+        <input placeholder="Введите текст сообщения..." id="input">
+      </div>
+      <button type='submit' class="button" disabled>Отправить</button>
+    </form>
+    <div class="comments-container">
+    </div>
+  </div>
+</body>
+
+<script defer>
+  // Store users in an object instead of an array to easier find them by id
+  const users = {
+    0: new User(0, 'Алексей_1994b', './images/user_1.png'),
+    1: new User(1, 'Максим Авдеенко', './images/user_2.png'),
+    2: new User(2, 'Джунбокс3000', './images/user_3.png'),
+  }
+
+  new App(users)
+</script>
+
+</html>

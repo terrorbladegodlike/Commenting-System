@@ -1,0 +1,15 @@
+{
+  "name": "comment-system-ts",
+  "version": "1.0.0",
+  "description": "commenting system ts",
+  "main": "main.js",
+  "scripts": {
+    "start": "lite-server --baseDir ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^5.0.4"
+  }
+}
